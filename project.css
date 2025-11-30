@@ -1,0 +1,240 @@
+/*
+  CSS for L12_66034497.css
+  เพิ่มการจัดตำแหน่งปุ่มวิดีโอไปขวาล่าง
+*/
+
+/* --- GLOBAL STYLES --- */
+body {
+    padding-top: 56px; 
+    font-family: Arial, sans-serif;
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important; 
+}
+
+/* Add hover effect to nav-links */
+.nav-link:hover {
+    color: #cccccc !important;
+}
+
+/* --- SLIDER (CAROUSEL) STYLES --- */
+#slider {
+    position: relative;
+    height: 60vh; 
+}
+
+#mySlider {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 60vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Background images for the carousel items (Placeholders) */
+.carousel-image-1 {
+    background-image: url('https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5KTT3KICptggivaZs8AIS5T1cQaHwmfBZruyNPk7PhmH3AnFym9.jpg');
+}
+
+.carousel-image-2 {
+    background-image: url('https://f.ptcdn.info/565/086/000/m51wo7zkisElDo0R7aS-o.jpg');
+}
+
+.carousel-image-3 {
+    background-image: url('https://gentstudyabroad.com/wp-content/uploads/2022/12/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B9%80%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%81%E0%B8%9E%E0%B8%87.png');
+}
+
+/* Overlay for better text readability on the carousel */
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+/* Carousel Caption Styling */
+.carousel-caption {
+    top: 50%; 
+    transform: translateY(-50%);
+    bottom: auto;
+    text-align: center;
+    color: white;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem; 
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem; 
+    line-height: 1.6;
+}
+
+/* --- ABOUT SECTION STYLES (ปรับปรุง) --- */
+#about {
+    background: url('https://pichitnoomblog.wordpress.com/wp-content/uploads/2016/05/paris-eiffel-tower-pictures-hd-wallpaper-1080x675.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 0; 
+    position: relative; /* สำคัญ: กำหนดให้ Section นี้เป็นจุดอ้างอิงสำหรับปุ่ม */
+    display: flex; 
+    align-items: center; 
+    min-height: 50vh; 
+}
+
+/* Dark overlay for the about section */
+#about .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#about .container {
+    z-index: 1; 
+}
+
+#about h1 {
+    font-weight: 700; 
+    margin-bottom: 20px; 
+    font-size: 3.2rem; 
+    line-height: 1.2;
+}
+
+#about p.lead { 
+    font-size: 1.3rem !important; 
+    line-height: 1.6;
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* *** NEW: Positioning for the Video Button (ปุ่มวิดีโอ) *** */
+.video-button-container {
+    position: absolute;
+    bottom: 30px; /* ระยะห่างจากขอบล่าง */
+    right: 30px; /* ระยะห่างจากขอบขวา */
+    z-index: 10; /* ให้ปุ่มอยู่ด้านบนสุด */
+}
+
+/* --- CARD STYLES --- */
+/* General Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Card in grid should be full width (no max-width needed) */
+.col-lg-4 .card {
+    margin: 0; 
+}
+
+/* Make the tab card wider for better display of tabs */
+.card.text-center {
+    margin-bottom: 0;
+}
+
+.card-header, .card-footer {
+    padding: 15px;
+    background-color: #f8f9fa; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer {
+    background-color: #f8f9fa; 
+}
+
+.card-img-top {
+    height: 320px; 
+    object-fit: cover; 
+    margin-bottom: 0;
+}
+
+/* Tab content image size - Irrelevant, but keeping for consistency */
+.tab-content .card-img-top {
+    height: 220px; 
+    margin-bottom: 15px;
+}
+
+
+/* Specific styling for the danger border card (แดง) */
+.card.border-danger {
+    border: 2px solid #dc3545 !important;
+}
+/* Specific styling for the primary border card (น้ำเงิน) */
+.card.border-primary {
+    border: 2px solid #0d6efd !important;
+}
+/* New Styling for the Info/Major Card (ฟ้าอ่อน) */
+.card.border-info {
+    border: 2px solid #0dcaf0 !important;
+}
+.bg-info {
+    background-color: #0dcaf0 !important; /* Standard Bootstrap Info Color */
+}
+.text-info {
+    color: #0dcaf0 !important;
+}
+
+
+/* Tab link color adjustment (Primary tab theme: Comparison Card) */
+.card-header-tabs .nav-link.active {
+    background-color: #ffffff !important; 
+    border-color: #0d6efd #0d6efd #ffffff; 
+    color: #0d6efd !important; 
+    font-weight: bold;
+}
+.card-header-tabs .nav-link {
+    border: 1px solid transparent;
+    color: #ffffff !important; 
+}
+
+/* Tab link color adjustment (Info tab theme: Major Card) */
+.card-header .bg-info .nav-link.active {
+    background-color: #ffffff !important; 
+    border-color: #0dcaf0 #0dcaf0 #ffffff; 
+    color: #0dcaf0 !important; /* Active tab text is the info color */
+}
+.card-header .bg-info .nav-link {
+    color: #ffffff !important;
+}
+
+
+/* Custom font size for the paragraph in the tab content */
+.fs-7 {
+    font-size: 0.9rem !important;
+}
+
+/* Style for the content revealed by Collapse */
+.collapse.show {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: #0d6efd !important; /* น้ำเงินหลัก */
+    color: white;
+    padding: 20px 0;
+}
+
+footer h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
